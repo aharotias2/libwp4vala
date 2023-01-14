@@ -4,9 +4,9 @@ inc = include_directories('.')
 
 libwp4vala = library(
   'com.github.aharotias2.libwp4vala',
+  'src/WpError.vala',
   'src/WpCommentmetaDto.vala',
   'src/WpCommentsDto.vala',
-  'src/WpError.vala',
   'src/WpLinksDto.vala',
   'src/WpOptionsDto.vala',
   'src/WpPostmetaDto.vala',
@@ -16,6 +16,17 @@ libwp4vala = library(
   'src/WpTermsDto.vala',
   'src/WpUsermetaDto.vala',
   'src/WpUsersDto.vala',
+  'src/WpCommentmetaDao.vala',
+  'src/WpCommentsDao.vala',
+  'src/WpLinksDao.vala',
+  'src/WpOptionsDao.vala',
+  'src/WpPostmetaDao.vala',
+  'src/WpPostsDao.vala',
+  'src/WpTermRelationshipsDao.vala',
+  'src/WpTermTaxonomyDao.vala',
+  'src/WpTermsDao.vala',
+  'src/WpUsermetaDao.vala',
+  'src/WpUsersDao.vala',
   dependencies: [
     dependency('glib-2.0'),
     dependency('libgda-5.0'),
