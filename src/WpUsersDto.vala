@@ -90,7 +90,7 @@ namespace Wp4V {
             }
         }
 
-        public WpUsersDto(bool use_default = true) {
+        public WpUsersDto(bool use_default = false) {
             base("wp_users",
                 "ID", Type.LONG,
                 "user_login", Type.STRING,

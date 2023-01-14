@@ -54,9 +54,9 @@ namespace Wp4V {
             }
         }
 
-        public WpTermTaxonomyDto(bool use_default = true) {
+        public WpTermTaxonomyDto(bool use_default = false) {
             base("wp_term_taxonomy",
-                "term_taxnomy_id", Type.LONG,
+                "term_taxonomy_id", Type.LONG,
                 "term_id", Type.LONG,
                 "taxonomy", Type.STRING,
                 "description", Type.STRING,

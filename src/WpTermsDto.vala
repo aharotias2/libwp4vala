@@ -36,7 +36,7 @@ namespace Wp4V {
             }
         }
 
-        public WpTermsDto(bool use_default = true) {
+        public WpTermsDto(bool use_default = false) {
             base("wp_terms",
                 "term_id", Type.LONG,
                 "name", Type.STRING,

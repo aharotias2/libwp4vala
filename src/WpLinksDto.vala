@@ -117,7 +117,7 @@ namespace Wp4V {
             }
         }
 
-        public WpLinksDto(bool use_default = true) {
+        public WpLinksDto(bool use_default = false) {
             base("wp_links",
                 "link_id", Type.LONG,
                 "link_url", Type.STRING,

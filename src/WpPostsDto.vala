@@ -65,10 +65,10 @@ namespace Wp4V {
 
         public string post_status {
             owned get {
-                return column_values["ID"].get_string();
+                return column_values["post_status"].get_string();
             }
             set {
-                column_values["ID"] = Petitconn.ValueUtils.new_string_value(value);
+                column_values["post_status"] = Petitconn.ValueUtils.new_string_value(value);
             }
         }
 
@@ -207,7 +207,7 @@ namespace Wp4V {
             }
         }
 
-        public WpPostsDto(bool use_default = true) {
+        public WpPostsDto(bool use_default = false) {
             base("wp_posts",
                 "ID", Type.LONG,
                 "post_author", Type.STRING,

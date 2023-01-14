@@ -27,8 +27,8 @@ namespace Wp4V {
             }
         }
 
-        public WpTermRelationshipsDto(bool use_default = true) {
-            base("wp_terem_relationships",
+        public WpTermRelationshipsDto(bool use_default = false) {
+            base("wp_term_relationships",
                 "object_id", Type.LONG,
                 "term_taxonomy_id", Type.LONG,
                 "term_order", Type.INT

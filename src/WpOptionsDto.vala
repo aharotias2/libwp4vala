@@ -36,7 +36,7 @@ namespace Wp4V {
             }
         }
 
-        public WpOptionsDto(bool use_default = true) {
+        public WpOptionsDto(bool use_default = false) {
             base("wp_options",
                 "option_id", Type.LONG,
                 "option_name", Type.STRING,

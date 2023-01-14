@@ -126,7 +126,7 @@ namespace Wp4V {
             }
         }
 
-        public WpCommentsDto(bool use_default = true) {
+        public WpCommentsDto(bool use_default = false) {
             base("wp_comments",
                 "comment_ID", Type.LONG,
                 "comment_post_ID", Type.LONG,

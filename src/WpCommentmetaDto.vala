@@ -36,7 +36,7 @@ namespace Wp4V {
             }
         }
 
-        public WpCommentmetaDto(bool use_default = true) {
+        public WpCommentmetaDto(bool use_default = false) {
             base("wp_commentmeta", "meta_id", Type.LONG, "comment_id", Type.LONG,
                     "meta_key", Type.STRING, "meta_value", Type.STRING);
             if (use_default) {
