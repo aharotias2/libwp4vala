@@ -1,0 +1,4 @@
+[wrap-git]
+directory=libpetitconn
+url=https://github.com/aharotias2/Petitconn.git
+revision=main
