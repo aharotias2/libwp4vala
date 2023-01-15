@@ -1,38 +1,40 @@
+using Petitconn;
+
 namespace Wp4V {
-    public class WpTermsDto : Petitconn.ColumnSet {
+    public class WpTermsDto : ColumnSet {
         public long term_id {
             get {
-                return this["term_id"].get_long();
+                return ValueUtils.get_long_or_zero(this["term_id"]);
             }
             set {
-                this["term_id"] = Petitconn.ValueUtils.new_long_value(value);
+                this["term_id"] = ValueUtils.new_long_value(value);
             }
         }
 
-        public string name {
+        public string? name {
             owned get {
-                return this["name"].get_string();
+                return ValueUtils.get_string_or_null(this["name"]);
             }
             set {
-                this["name"] = Petitconn.ValueUtils.new_string_value(value);
+                this["name"] = ValueUtils.new_string_value(value);
             }
         }
 
-        public string slug {
+        public string? slug {
             owned get {
-                return this["slug"].get_string();
+                return ValueUtils.get_string_or_null(this["slug"]);
             }
             set {
-                this["slug"] = Petitconn.ValueUtils.new_string_value(value);
+                this["slug"] = ValueUtils.new_string_value(value);
             }
         }
 
         public long term_group {
             get {
-                return this["term_group"].get_long();
+                return ValueUtils.get_long_or_zero(this["term_group"]);
             }
             set {
-                this["term_group"] = Petitconn.ValueUtils.new_long_value(value);
+                this["term_group"] = ValueUtils.new_long_value(value);
             }
         }
 

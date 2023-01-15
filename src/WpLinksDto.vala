@@ -1,119 +1,121 @@
+using Petitconn;
+
 namespace Wp4V {
-    public class WpLinksDto : Petitconn.ColumnSet {
+    public class WpLinksDto : ColumnSet {
         public long link_id {
             get {
-                return this["link_id"].get_long();
+                return ValueUtils.get_long_or_zero(this["link_id"]);
             }
             set {
-                this["link_id"] = Petitconn.ValueUtils.new_long_value(value);
+                this["link_id"] = ValueUtils.new_long_value(value);
             }
         }
 
-        public string link_url {
-            get {
-                return this["link_url"].get_string();
+        public string? link_url {
+            owned get {
+                return ValueUtils.get_string_or_null(this["link_url"]);
             }
             set {
-                this["link_url"] = Petitconn.ValueUtils.new_string_value(value);
+                this["link_url"] = ValueUtils.new_string_value(value);
             }
         }
 
-        public string link_name {
-            get {
-                return this["link_name"].get_string();
+        public string? link_name {
+            owned get {
+                return ValueUtils.get_string_or_null(this["link_name"]);
             }
             set {
-                this["link_name"] = Petitconn.ValueUtils.new_string_value(value);
+                this["link_name"] = ValueUtils.new_string_value(value);
             }
         }
 
-        public string link_image {
-            get {
-                return this["link_image"].get_string();
+        public string? link_image {
+            owned get {
+                return ValueUtils.get_string_or_null(this["link_image"]);
             }
             set {
-                this["link_image"] = Petitconn.ValueUtils.new_string_value(value);
+                this["link_image"] = ValueUtils.new_string_value(value);
             }
         }
 
-        public string link_target {
-            get {
-                return this["link_target"].get_string();
+        public string? link_target {
+            owned get {
+                return ValueUtils.get_string_or_null(this["link_target"]);
             }
             set {
-                this["link_target"] = Petitconn.ValueUtils.new_string_value(value);
+                this["link_target"] = ValueUtils.new_string_value(value);
             }
         }
 
-        public string link_description {
-            get {
-                return this["link_description"].get_string();
+        public string? link_description {
+            owned get {
+                return ValueUtils.get_string_or_null(this["link_description"]);
             }
             set {
-                this["link_description"] = Petitconn.ValueUtils.new_string_value(value);
+                this["link_description"] = ValueUtils.new_string_value(value);
             }
         }
 
-        public string link_visible {
-            get {
-                return this["link_visible"].get_string();
+        public string? link_visible {
+            owned get {
+                return ValueUtils.get_string_or_null(this["link_visible"]);
             }
             set {
-                this["link_visible"] = Petitconn.ValueUtils.new_string_value(value);
+                this["link_visible"] = ValueUtils.new_string_value(value);
             }
         }
 
         public long link_owner {
             get {
-                return this["link_owner"].get_long();
+                return ValueUtils.get_long_or_zero(this["link_owner"]);
             }
             set {
-                this["link_owner"] = Petitconn.ValueUtils.new_long_value(value);
+                this["link_owner"] = ValueUtils.new_long_value(value);
             }
         }
 
         public int link_rating {
             get {
-                return this["link_rating"].get_int();
+                return ValueUtils.get_int_or_zero(this["link_rating"]);
             }
             set {
-                this["link_rating"] = Petitconn.ValueUtils.new_int_value(value);
+                this["link_rating"] = ValueUtils.new_int_value(value);
             }
         }
 
-        public string link_updated {
-            get {
-                return this["link_updated"].get_string();
+        public string? link_updated {
+            owned get {
+                return ValueUtils.get_string_or_null(this["link_updated"]);
             }
             set {
-                this["link_updated"] = Petitconn.ValueUtils.new_string_value(value);
+                this["link_updated"] = ValueUtils.new_string_value(value);
             }
         }
 
-        public string link_rel {
-            get {
-                return this["link_rel"].get_string();
+        public string? link_rel {
+            owned get {
+                return ValueUtils.get_string_or_null(this["link_rel"]);
             }
             set {
-                this["link_rel"] = Petitconn.ValueUtils.new_string_value(value);
+                this["link_rel"] = ValueUtils.new_string_value(value);
             }
         }
 
-        public string link_notes {
-            get {
-                return this["link_notes"].get_string();
+        public string? link_notes {
+            owned get {
+                return ValueUtils.get_string_or_null(this["link_notes"]);
             }
             set {
-                this["link_notes"] = Petitconn.ValueUtils.new_string_value(value);
+                this["link_notes"] = ValueUtils.new_string_value(value);
             }
         }
 
-        public string link_rss {
-            get {
-                return this["link_rss"].get_string();
+        public string? link_rss {
+            owned get {
+                return ValueUtils.get_string_or_null(this["link_rss"]);
             }
             set {
-                this["link_rss"] = Petitconn.ValueUtils.new_string_value(value);
+                this["link_rss"] = ValueUtils.new_string_value(value);
             }
         }
 

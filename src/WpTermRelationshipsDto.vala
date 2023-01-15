@@ -1,29 +1,31 @@
+using Petitconn;
+
 namespace Wp4V {
-    public class WpTermRelationshipsDto : Petitconn.ColumnSet {
+    public class WpTermRelationshipsDto : ColumnSet {
         public long object_id {
             get {
-                return this["object_id"].get_long();
+                return ValueUtils.get_long_or_zero(this["object_id"]);
             }
             set {
-                this["object_id"] = Petitconn.ValueUtils.new_long_value(value);
+                this["object_id"] = ValueUtils.new_long_value(value);
             }
         }
 
         public long term_taxonomy_id {
             get {
-                return this["term_taxonomy_id"].get_long();
+                return ValueUtils.get_long_or_zero(this["term_taxonomy_id"]);
             }
             set {
-                this["term_taxonomy_id"] = Petitconn.ValueUtils.new_long_value(value);
+                this["term_taxonomy_id"] = ValueUtils.new_long_value(value);
             }
         }
 
         public int term_order {
             get {
-                return this["term_order"].get_int();
+                return ValueUtils.get_int_or_zero(this["term_order"]);
             }
             set {
-                this["term_order"] = Petitconn.ValueUtils.new_int_value(value);
+                this["term_order"] = ValueUtils.new_int_value(value);
             }
         }
 

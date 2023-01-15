@@ -1,38 +1,40 @@
+using Petitconn;
+
 namespace Wp4V {
-    public class WpOptionsDto : Petitconn.ColumnSet {
+    public class WpOptionsDto : ColumnSet {
         public long option_id {
             get {
-                return this["option_id"].get_long();
+                return ValueUtils.get_long_or_zero(this["option_id"]);
             }
             set {
-                this["option_id"] = Petitconn.ValueUtils.new_long_value(value);
+                this["option_id"] = ValueUtils.new_long_value(value);
             }
         }
 
         public string? option_name {
             owned get {
-                return this["option_name"].get_string();
+                return ValueUtils.get_string_or_null(this["option_name"]);
             }
             set {
-                this["option_name"] = Petitconn.ValueUtils.new_string_value(value);
+                this["option_name"] = ValueUtils.new_string_value(value);
             }
         }
 
         public string? option_value {
             owned get {
-                return this["option_value"].get_string();
+                return ValueUtils.get_string_or_null(this["option_value"]);
             }
             set {
-                this["option_value"] = Petitconn.ValueUtils.new_string_value(value);
+                this["option_value"] = ValueUtils.new_string_value(value);
             }
         }
 
         public string? autoload {
             owned get {
-                return this["autoload"].get_string();
+                return ValueUtils.get_string_or_null(this["autoload"]);
             }
             set {
-                this["autoload"] = Petitconn.ValueUtils.new_string_value(value);
+                this["autoload"] = ValueUtils.new_string_value(value);
             }
         }
 

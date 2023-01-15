@@ -1,128 +1,130 @@
+using Petitconn;
+
 namespace Wp4V {
-    public class WpCommentsDto : Petitconn.ColumnSet {
+    public class WpCommentsDto : ColumnSet {
         public long comment_id {
             get {
-                return this["comment_ID"].get_long();
+                return ValueUtils.get_long_or_zero(this["comment_ID"]);
             }
             set {
-                this["comment_ID"] = Petitconn.ValueUtils.new_long_value(value);
+                this["comment_ID"] = ValueUtils.new_long_value(value);
             }
         }
 
         public long comment_post_id {
             get {
-                return this["comment_post_ID"].get_long();
+                return ValueUtils.get_long_or_zero(this["comment_post_ID"]);
             }
             set {
-                this["comment_post_ID"] = Petitconn.ValueUtils.new_long_value(value);
+                this["comment_post_ID"] = ValueUtils.new_long_value(value);
             }
         }
 
-        public string comment_author {
+        public string? comment_author {
             owned get {
-                return this["comment_author"].get_string();
+                return ValueUtils.get_string_or_null(this["comment_author"]);
             }
             set {
-                this["comment_author"] = Petitconn.ValueUtils.new_string_value(value);
+                this["comment_author"] = ValueUtils.new_string_value(value);
             }
         }
 
-        public string comment_author_email {
+        public string? comment_author_email {
             owned get {
-                return this["comment_author_email"].get_string();
+                return ValueUtils.get_string_or_null(this["comment_author_email"]);
             }
             set {
-                this["comment_author_email"] = Petitconn.ValueUtils.new_string_value(value);
+                this["comment_author_email"] = ValueUtils.new_string_value(value);
             }
         }
 
-        public string comment_author_ip {
+        public string? comment_author_ip {
             owned get {
-                return this["comment_author_IP"].get_string();
+                return ValueUtils.get_string_or_null(this["comment_author_IP"]);
             }
             set {
-                this["comment_author_IP"] = Petitconn.ValueUtils.new_string_value(value);
+                this["comment_author_IP"] = ValueUtils.new_string_value(value);
             }
         }
 
-        public string comment_date {
+        public string? comment_date {
             owned get {
-                return this["comment_date"].get_string();
+                return ValueUtils.get_string_or_null(this["comment_date"]);
             }
             set {
-                this["comment_date"] = Petitconn.ValueUtils.new_string_value(value);
+                this["comment_date"] = ValueUtils.new_string_value(value);
             }
         }
 
-        public string comment_date_gmt {
+        public string? comment_date_gmt {
             owned get {
-                return this["comment_date_gmt"].get_string();
+                return ValueUtils.get_string_or_null(this["comment_date_gmt"]);
             }
             set {
-                this["comment_date_gmt"] = Petitconn.ValueUtils.new_string_value(value);
+                this["comment_date_gmt"] = ValueUtils.new_string_value(value);
             }
         }
 
-        public string comment_content {
+        public string? comment_content {
             owned get {
-                return this["comment_content"].get_string();
+                return ValueUtils.get_string_or_null(this["comment_content"]);
             }
             set {
-                this["comment_content"] = Petitconn.ValueUtils.new_string_value(value);
+                this["comment_content"] = ValueUtils.new_string_value(value);
             }
         }
 
         public int comment_karma {
             get {
-                return this["comment_karma"].get_int();
+                return ValueUtils.get_int_or_zero(this["comment_karma"].get_int());
             }
             set {
-                this["comment_karma"] = Petitconn.ValueUtils.new_int_value(value);
+                this["comment_karma"] = ValueUtils.new_int_value(value);
             }
         }
 
-        public string comment_approved {
+        public string? comment_approved {
             owned get {
-                return this["comment_approved"].get_string();
+                return ValueUtils.get_string_or_null(this["comment_approved"]);
             }
             set {
-                this["comment_approved"] = Petitconn.ValueUtils.new_string_value(value);
+                this["comment_approved"] = ValueUtils.new_string_value(value);
             }
         }
 
-        public string comment_agent {
+        public string? comment_agent {
             owned get {
-                return this["comment_agent"].get_string();
+                return ValueUtils.get_string_or_null(this["comment_agent"]);
             }
             set {
-                this["comment_agent"] = Petitconn.ValueUtils.new_string_value(value);
+                this["comment_agent"] = ValueUtils.new_string_value(value);
             }
         }
 
-        public string comment_type {
+        public string? comment_type {
             owned get {
-                return this["comment_type"].get_string();
+                return ValueUtils.get_string_or_null(this["comment_type"]);
             }
             set {
-                this["comment_type"] = Petitconn.ValueUtils.new_string_value(value);
+                this["comment_type"] = ValueUtils.new_string_value(value);
             }
         }
 
         public long comment_parent {
             get {
-                return this["comment_parent"].get_long();
+                return ValueUtils.get_long_or_zero(this["comment_parent"]);
             }
             set {
-                this["comment_parent"] = Petitconn.ValueUtils.new_long_value(value);
+                this["comment_parent"] = ValueUtils.new_long_value(value);
             }
         }
 
         public long user_id {
             get {
-                return this["comment_id"].get_long();
+                return ValueUtils.get_long_or_zero(this["comment_id"]);
             }
             set {
-                this["comment_id"] = Petitconn.ValueUtils.new_long_value(value);
+                this["comment_id"] = ValueUtils.new_long_value(value);
             }
         }
 

@@ -1,38 +1,40 @@
+using Petitconn;
+
 namespace Wp4V {
-    public class WpCommentmetaDto : Petitconn.ColumnSet {
+    public class WpCommentmetaDto : ColumnSet {
         public long meta_id {
             get {
-                return this["meta_id"].get_long();
+                return ValueUtils.get_long_or_zero(this["meta_id"]);
             }
             set {
-                this["meta_id"] = Petitconn.ValueUtils.new_long_value(value);
+                this["meta_id"] = ValueUtils.new_long_value(value);
             }
         }
 
         public long comment_id {
             get {
-                return this["comment_id"].get_long();
+                return ValueUtils.get_long_or_zero(this["comment_id"]);
             }
             set {
-                this["comment_id"] = Petitconn.ValueUtils.new_long_value(value);
+                this["comment_id"] = ValueUtils.new_long_value(value);
             }
         }
 
         public string? meta_key {
             owned get {
-                return this["meta_key"].get_string();
+                return ValueUtils.get_string_or_null(this["meta_key"]);
             }
             set {
-                this["meta_key"] = Petitconn.ValueUtils.new_string_value(value);
+                this["meta_key"] = ValueUtils.new_string_value(value);
             }
         }
 
         public string? meta_value {
             owned get {
-                return this["meta_value"].get_string();
+                return ValueUtils.get_string_or_null(this["meta_value"]);
             }
             set {
-                this["meta_value"] = Petitconn.ValueUtils.new_string_value(value);
+                this["meta_value"] = ValueUtils.new_string_value(value);
             }
         }
 

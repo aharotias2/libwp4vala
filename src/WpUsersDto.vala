@@ -1,92 +1,94 @@
+using Petitconn;
+
 namespace Wp4V {
-    public class WpUsersDto : Petitconn.ColumnSet {
+    public class WpUsersDto : ColumnSet {
         public long id {
             get {
-                return this["ID"].get_long();
+                return ValueUtils.get_long_or_zero(this["ID"]);
             }
             set {
-                this["ID"] = Petitconn.ValueUtils.new_long_value(value);
+                this["ID"] = ValueUtils.new_long_value(value);
             }
         }
 
-        public string user_login {
-            get {
-                return this["user_login"].get_string();
+        public string? user_login {
+            owned get {
+                return ValueUtils.get_string_or_null(this["user_login"]);
             }
             set {
-                this["user_login"] = Petitconn.ValueUtils.new_string_value(value);
+                this["user_login"] = ValueUtils.new_string_value(value);
             }
         }
 
-        public string user_pass {
-            get {
-                return this["user_pass"].get_string();
+        public string? user_pass {
+            owned get {
+                return ValueUtils.get_string_or_null(this["user_pass"]);
             }
             set {
-                this["user_pass"] = Petitconn.ValueUtils.new_string_value(value);
+                this["user_pass"] = ValueUtils.new_string_value(value);
             }
         }
 
-        public string user_nicename {
-            get {
-                return this["user_nicename"].get_string();
+        public string? user_nicename {
+            owned get {
+                return ValueUtils.get_string_or_null(this["user_nicename"]);
             }
             set {
-                this["user_nicename"] = Petitconn.ValueUtils.new_string_value(value);
+                this["user_nicename"] = ValueUtils.new_string_value(value);
             }
         }
 
-        public string user_email {
-            get {
-                return this["user_email"].get_string();
+        public string? user_email {
+            owned get {
+                return ValueUtils.get_string_or_null(this["user_email"]);
             }
             set {
-                this["user_email"] = Petitconn.ValueUtils.new_string_value(value);
+                this["user_email"] = ValueUtils.new_string_value(value);
             }
         }
 
-        public string user_url {
-            get {
-                return this["user_url"].get_string();
+        public string? user_url {
+            owned get {
+                return ValueUtils.get_string_or_null(this["user_url"]);
             }
             set {
-                this["user_url"] = Petitconn.ValueUtils.new_string_value(value);
+                this["user_url"] = ValueUtils.new_string_value(value);
             }
         }
 
-        public string user_registered {
-            get {
-                return this["user_registered"].get_string();
+        public string? user_registered {
+            owned get {
+                return ValueUtils.get_string_or_null(this["user_registered"]);
             }
             set {
-                this["user_registered"] = Petitconn.ValueUtils.new_string_value(value);
+                this["user_registered"] = ValueUtils.new_string_value(value);
             }
         }
 
         public long user_activation_key {
             get {
-                return this["user_activation_key"].get_long();
+                return ValueUtils.get_long_or_zero(this["user_activation_key"]);
             }
             set {
-                this["user_activation_key"] = Petitconn.ValueUtils.new_long_value(value);
+                this["user_activation_key"] = ValueUtils.new_long_value(value);
             }
         }
 
         public int user_status {
             get {
-                return this["user_status"].get_int();
+                return ValueUtils.get_int_or_zero(this["user_status"]);
             }
             set {
-                this["user_status"] = Petitconn.ValueUtils.new_int_value(value);
+                this["user_status"] = ValueUtils.new_int_value(value);
             }
         }
 
-        public string display_name {
-            get {
-                return this["display_name"].get_string();
+        public string? display_name {
+            owned get {
+                return ValueUtils.get_string_or_null(this["display_name"]);
             }
             set {
-                this["display_name"] = Petitconn.ValueUtils.new_string_value(value);
+                this["display_name"] = ValueUtils.new_string_value(value);
             }
         }
 
