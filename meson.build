@@ -2,7 +2,7 @@ project('com.github.aharotias2.libwp4vala', 'vala', 'c', version: '1.0.0')
 
 inc = include_directories('.')
 
-libwp4vala = library(
+libwp4vala = static_library(
   'com.github.aharotias2.libwp4vala',
   'src/WpError.vala',
   'src/WpCommentmetaDto.vala',
