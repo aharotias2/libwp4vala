@@ -4,11 +4,11 @@ namespace Wp4V {
             base(conn);
         }
 
-        public Gee.List<WpTermTaxonomyDto?> select(WpTermTaxonomyDto condition) throws Error {
+        public Gee.List<WpTermTaxonomyEntity?> select(WpTermTaxonomyEntity condition) throws Error {
             var data = select_as_map(condition);
-            var list = new Gee.ArrayList<WpTermTaxonomyDto?>();
+            var list = new Gee.ArrayList<WpTermTaxonomyEntity?>();
             foreach (var item in data) {
-                var dto = new WpTermTaxonomyDto();
+                var dto = new WpTermTaxonomyEntity();
                 dto.set_values(item);
                 list.add(dto);
             }

@@ -1,7 +1,7 @@
 using Petitconn;
 
 namespace Wp4V {
-    public class WpTermRelationshipsDto : ColumnSet {
+    public class WpTermRelationshipsEntity : ColumnSet {
         public long object_id {
             get {
                 return ValueUtils.get_long_or_zero(this["object_id"]);
@@ -29,7 +29,7 @@ namespace Wp4V {
             }
         }
 
-        public WpTermRelationshipsDto(bool use_default = false) {
+        public WpTermRelationshipsEntity(bool use_default = false) {
             base("wp_term_relationships",
                 "object_id", Type.LONG,
                 "term_taxonomy_id", Type.LONG,

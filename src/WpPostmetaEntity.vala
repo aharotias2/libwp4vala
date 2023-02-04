@@ -1,7 +1,7 @@
 using Petitconn;
 
 namespace Wp4V {
-    public class WpPostmetaDto : ColumnSet {
+    public class WpPostmetaEntity : ColumnSet {
         public long meta_id {
             get {
                 return ValueUtils.get_long_or_zero(this["meta_id"]);
@@ -38,7 +38,7 @@ namespace Wp4V {
             }
         }
 
-        public WpPostmetaDto() {
+        public WpPostmetaEntity() {
             base("wp_postmeta",
                 "meta_id", Type.LONG,
                 "post_id", Type.LONG,

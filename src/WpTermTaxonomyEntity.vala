@@ -1,7 +1,7 @@
 using Petitconn;
 
 namespace Wp4V {
-    public class WpTermTaxonomyDto : ColumnSet {
+    public class WpTermTaxonomyEntity : ColumnSet {
         public long term_taxonomy_id {
             get {
                 return ValueUtils.get_long_or_zero(this["term_taxonomy_id"]);
@@ -56,7 +56,7 @@ namespace Wp4V {
             }
         }
 
-        public WpTermTaxonomyDto(bool use_default = false) {
+        public WpTermTaxonomyEntity(bool use_default = false) {
             base("wp_term_taxonomy",
                 "term_taxonomy_id", Type.LONG,
                 "term_id", Type.LONG,

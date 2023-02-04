@@ -4,11 +4,11 @@ namespace Wp4V {
             base(conn);
         }
 
-        public Gee.List<WpPostsDto?> select(WpPostsDto condition) throws Error {
+        public Gee.List<WpPostsEntity?> select(WpPostsEntity condition) throws Error {
             var data = select_as_map(condition);
-            var list = new Gee.ArrayList<WpPostsDto?>();
+            var list = new Gee.ArrayList<WpPostsEntity?>();
             foreach (var item in data) {
-                var dto = new WpPostsDto();
+                var dto = new WpPostsEntity();
                 dto.set_values(item);
                 list.add(dto);
             }

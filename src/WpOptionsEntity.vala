@@ -1,7 +1,7 @@
 using Petitconn;
 
 namespace Wp4V {
-    public class WpOptionsDto : ColumnSet {
+    public class WpOptionsEntity : ColumnSet {
         public long option_id {
             get {
                 return ValueUtils.get_long_or_zero(this["option_id"]);
@@ -38,7 +38,7 @@ namespace Wp4V {
             }
         }
 
-        public WpOptionsDto(bool use_default = false) {
+        public WpOptionsEntity(bool use_default = false) {
             base("wp_options",
                 "option_id", Type.LONG,
                 "option_name", Type.STRING,

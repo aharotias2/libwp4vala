@@ -1,7 +1,7 @@
 using Petitconn;
 
 namespace Wp4V {
-    public class WpLinksDto : ColumnSet {
+    public class WpLinksEntity : ColumnSet {
         public long link_id {
             get {
                 return ValueUtils.get_long_or_zero(this["link_id"]);
@@ -119,7 +119,7 @@ namespace Wp4V {
             }
         }
 
-        public WpLinksDto(bool use_default = false) {
+        public WpLinksEntity(bool use_default = false) {
             base("wp_links",
                 "link_id", Type.LONG,
                 "link_url", Type.STRING,

@@ -1,7 +1,7 @@
 using Petitconn;
 
 namespace Wp4V {
-    public class WpCommentsDto : ColumnSet {
+    public class WpCommentsEntity : ColumnSet {
         public long comment_id {
             get {
                 return ValueUtils.get_long_or_zero(this["comment_ID"]);
@@ -128,7 +128,7 @@ namespace Wp4V {
             }
         }
 
-        public WpCommentsDto(bool use_default = false) {
+        public WpCommentsEntity(bool use_default = false) {
             base("wp_comments",
                 "comment_ID", Type.LONG,
                 "comment_post_ID", Type.LONG,

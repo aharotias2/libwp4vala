@@ -1,7 +1,7 @@
 using Petitconn;
 
 namespace Wp4V {
-    public class WpUsersDto : ColumnSet {
+    public class WpUsersEntity : ColumnSet {
         public long id {
             get {
                 return ValueUtils.get_long_or_zero(this["ID"]);
@@ -92,7 +92,7 @@ namespace Wp4V {
             }
         }
 
-        public WpUsersDto(bool use_default = false) {
+        public WpUsersEntity(bool use_default = false) {
             base("wp_users",
                 "ID", Type.LONG,
                 "user_login", Type.STRING,
