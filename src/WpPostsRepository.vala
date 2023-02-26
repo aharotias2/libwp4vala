@@ -1,6 +1,6 @@
 namespace Wp4V {
-    public class WpPostsDao : Petitconn.Dao {
-        public WpPostsDao(Gda.Connection conn) {
+    public class WpPostsRepository : Petitconn.Repository {
+        public WpPostsRepository(Gda.Connection conn) {
             base(conn);
         }
 
@@ -17,8 +17,12 @@ namespace Wp4V {
 
         public long get_max_post_id() throws Error {
             var model = conn.execute_select_command("SELECT MAX(ID) FROM wp_posts");
-            var val = model.get_value_at(0, 0);
-            return val.get_long();
+            if (model.get_n_rows() > 0 && model.get_n_columns() > 0) {
+                var val = model.get_value_at(0, 0);
+                return val.get_long();
+            } else {
+                throw new WpError.DATA_ERROR("The empty model of get_max_post_id.");
+            }
         }
 
         public long get_next_id() throws Error {

@@ -1,6 +1,6 @@
 namespace Wp4V {
-    public class WpPostmetaDao : Petitconn.Dao {
-        public WpPostmetaDao(Gda.Connection conn) {
+    public class WpPostmetaRepository : Petitconn.Repository {
+        public WpPostmetaRepository(Gda.Connection conn) {
             base(conn);
         }
 

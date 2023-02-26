@@ -1,6 +1,6 @@
 namespace Wp4V {
-    public class WpUsersDao : Petitconn.Dao {
-        public WpUsersDao(Gda.Connection conn) {
+    public class WpUsersRepository : Petitconn.Repository {
+        public WpUsersRepository(Gda.Connection conn) {
             base(conn);
         }
 

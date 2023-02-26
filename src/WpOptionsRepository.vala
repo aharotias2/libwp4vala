@@ -1,6 +1,6 @@
 namespace Wp4V {
-    public class WpOptionsDao : Petitconn.Dao {
-        public WpOptionsDao(Gda.Connection conn) {
+    public class WpOptionsRepository : Petitconn.Repository {
+        public WpOptionsRepository(Gda.Connection conn) {
             base(conn);
         }
 
